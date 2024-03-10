@@ -1,0 +1,25 @@
+.card {
+    width: 100px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .spade::before {
+    content: "♠";
+  }
+  
+  .heart::before {
+    content: "♥";
+  }
+  
+  .diamond::before {
+    content: "♦";
+  }
+  
+  .club::before {
+    content: "♣";
+  }
+  
