@@ -1,11 +1,28 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function generarNumero() {
+  return Math.floor(Math.random() * 10) + 1;
+}
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function generarPalo() {
+  const palos = ["♠", "♣", "♥", "♦"];
+  const indice = Math.floor(Math.random() * palos.length);
+  return palos[indice];
+}
+
+function actualizarCarta() {
+  const numeroElement = document.getElementById("numero");
+  const paloElements = [
+    document.getElementById("palo1"),
+    document.getElementById("palo2"),
+    document.getElementById("palo3"),
+    document.getElementById("palo4")
+  ];
+
+  numeroElement.innerHTML = generarNumero();
+  for (let i = 0; i < paloElements.length; i++) {
+    paloElements[i].innerHTML = generarPalo();
+  }
+}
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  actualizarCarta();
 };
