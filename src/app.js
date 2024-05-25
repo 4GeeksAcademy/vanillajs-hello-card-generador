@@ -1,28 +1,26 @@
-function generarNumero() {
-  return Math.floor(Math.random() * 10) + 1;
-}
-
-function generarPalo() {
-  const palos = ["♠", "♣", "♥", "♦"];
-  const indice = Math.floor(Math.random() * palos.length);
-  return palos[indice];
-}
-
-function actualizarCarta() {
-  const numeroElement = document.getElementById("numero");
-  const paloElements = [
-    document.getElementById("palo1"),
-    document.getElementById("palo2"),
-    document.getElementById("palo3"),
-    document.getElementById("palo4")
+function generarCarta() {
+  var palos = ["spade", "heart", "diamond", "club"];
+  var valores = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+    "A"
   ];
 
-  numeroElement.innerHTML = generarNumero();
-  for (let i = 0; i < paloElements.length; i++) {
-    paloElements[i].innerHTML = generarPalo();
-  }
-}
+  var paloIndex = Math.floor(Math.random() * 4);
+  var valorIndex = Math.floor(Math.random() * 13);
 
-window.onload = function() {
-  actualizarCarta();
-};
+  var carta = document.getElementById("card");
+  carta.className = "card " + palos[paloIndex];
+  carta.innerHTML = valores[valorIndex];
+  carta.setAttribute("data-palo", palos[paloIndex]);
+}

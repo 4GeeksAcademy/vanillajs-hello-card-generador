@@ -1,71 +1,13 @@
-<!DOCTYPE html> ©
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carta de Baraja con Bootstrap</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <style>
-     
-      .card-baraja {
-        width: 150px;
-        height: 200px;
-        border: 1px solid #000;
-        border-radius: 10px;
-        background-color: #fff;
-        position: relative;
-      }
-
-      .card-number {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-      }
-
-      .card-suit {
-        position: absolute;
-        font-size: 24px;
-      }
-
-      .top-left,
-      .top-right,
-      .bottom-left,
-      .bottom-right {
-        top: 5px;
-      }
-
-      .top-left,
-      .bottom-left {
-        left: 5px;
-      }
-
-      .top-right,
-      .bottom-right {
-        right: 5px;
-      }
-
-      .bottom-left,
-      .bottom-right {
-        bottom: 5px;
-      }
-    </style>
+    <title>Carta Aleatoria</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
-  <body>
-    <div class="container mt-5">
-      <div class="card-baraja" id="carta">
-        <div class="card-number" id="numero">A</div>
-        <div class="card-suit top-left" id="palo1">&#9824;</div>
-        <div class="card-suit top-right" id="palo2">&#9824;</div>
-        <div class="card-suit bottom-left" id="palo3">&#9824;</div>
-        <div class="card-suit bottom-right" id="palo4">&#9824;</div>
-      </div>
-    </div>
+  <body onload="generarCarta()">
+    <div class="card" id="card"></div>
 
     <script src="app.js"></script>
   </body>

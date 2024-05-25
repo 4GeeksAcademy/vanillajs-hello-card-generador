@@ -1,25 +1,54 @@
+body {
+  background-color: green;
+  box-sizing: border-box;
+}
+
 .card {
-    width: 100px;
-    height: 150px;
-    border: 1px solid black;
-    border-radius: 10px;
-    display: inline-block;
-    margin: 20px;
-  }
-  
-  .spade::before {
-    content: "♠";
-  }
-  
-  .heart::before {
-    content: "♥";
-  }
-  
-  .diamond::before {
-    content: "♦";
-  }
-  
-  .club::before {
-    content: "♣";
-  }
-  
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin: auto;
+  width: 200px;
+  height: 250px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.card::before, .card::after {
+  content: attr(data-palo);
+  font-size: 40px;
+  position: absolute;
+}
+
+.card::before {
+  top: 10px;
+  left: 10px;
+}
+
+.card::after {
+  bottom: 10px;
+  right: 10px;
+}
+
+.spade::before, .spade::after {
+  content: "♠";
+}
+
+.heart::before, .heart::after {
+  content: "♥";
+  color: red; /* Opcional para colorear los corazones */
+}
+
+.diamond::before, .diamond::after {
+  content: "♦";
+  color: red; /* Opcional para colorear los diamantes */
+}
+
+.club::before, .club::after {
+  content: "♣";
+}
