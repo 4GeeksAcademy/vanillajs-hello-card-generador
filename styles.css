@@ -41,12 +41,12 @@ body {
 
 .heart::before, .heart::after {
   content: "♥";
-  color: red; /* Opcional para colorear los corazones */
+  color: red; 
 }
 
 .diamond::before, .diamond::after {
   content: "♦";
-  color: red; /* Opcional para colorear los diamantes */
+  color: red; 
 }
 
 .club::before, .club::after {
